@@ -7,6 +7,9 @@ Ejecutable como documento HTML5
     <meta charset="utf8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+        html {
+            background-color: #323234;
+        }
       .nobreak {
           white-space: nowrap;
       }
