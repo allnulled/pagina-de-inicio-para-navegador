@@ -57752,6 +57752,11 @@ const PaginaDeInicio = Castelog.metodos.un_componente_vue2("PaginaDeInicio",
  + "            </tr>"
  + "            <tr>"
  + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
+ + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_regenerar_credenciales_de_github\">Ir a regenerar mis credenciales de Github</button>"
+ + "                </td>"
+ + "            </tr>"
+ + "            <tr>"
+ + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
  + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_quora_espanyol\">Ir a Quora en español</button>"
  + "                </td>"
  + "            </tr>"
@@ -57850,6 +57855,15 @@ throw error;
 },
 ir_a_mi_perfil_de_github() {try {
 const url_destino = "https://github.com/allnulled";
+window.open( url_destino );
+} catch(error) {
+console.log(error);
+throw error;
+}
+
+},
+ir_a_regenerar_credenciales_de_github() {try {
+const url_destino = "https://github.com/settings/tokens";
 window.open( url_destino );
 } catch(error) {
 console.log(error);

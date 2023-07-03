@@ -89,6 +89,11 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
             </tr>
             <tr>
                 <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
+                    <button style="width:100%;" v-on:click="ir_a_regenerar_credenciales_de_github">Ir a regenerar mis credenciales de Github</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
                     <button style="width:100%;" v-on:click="ir_a_quora_espanyol">Ir a Quora en español</button>
                 </td>
             </tr>
@@ -146,6 +151,10 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
             }.
             método ir_a_mi_perfil_de_github donde {
                 creo url_destino como "https://github.com/allnulled".
+                hago window.open(url_destino).
+            }.
+            método ir_a_regenerar_credenciales_de_github donde {
+                creo url_destino como "https://github.com/settings/tokens".
                 hago window.open(url_destino).
             }.
             método ir_a_quora_espanyol donde {
