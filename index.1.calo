@@ -49,7 +49,7 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
         <tbody>
             <tr>
                 <td style="white-space:nowrap; color:white;">Buscar en Google:</td>
-                <td style="width:100%;"><input style="width:100%;" type="text" v-on:keypress.enter="buscar_en_google_normal" v-model="busqueda_para_google_normal" /></td>
+                <td style="width:100%;"><input style="width:100%;" type="text" v-on:keypress.enter="buscar_en_google_normal" v-model="busqueda_para_google_normal" ref="buscador_de_google_normal" /></td>
             </tr>
             <tr>
                 <td style="white-space:nowrap; color:white;">Buscar en Youtube:</td>
@@ -80,6 +80,11 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
             <tr>
                 <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
                     <button style="width:100%;" v-on:click="ir_a_github">Ir a Github</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
+                    <button style="width:100%;" v-on:click="ir_a_mi_perfil_de_github">Ir a mi perfil de Github</button>
                 </td>
             </tr>
             <tr>
@@ -139,10 +144,17 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
                 creo url_destino como "https://github.com/search/advanced".
                 hago window.open(url_destino).
             }.
+            método ir_a_mi_perfil_de_github donde {
+                creo url_destino como "https://github.com/allnulled".
+                hago window.open(url_destino).
+            }.
             método ir_a_quora_espanyol donde {
                 creo url_destino como "https://es.quora.com".
                 hago window.open(url_destino).
             }.
+        }.
+        método mounted donde {
+            hago this.$refs.buscador_de_google_normal.focus().
         }.
     }.
 }.

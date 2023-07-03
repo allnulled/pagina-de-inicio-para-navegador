@@ -57712,7 +57712,7 @@ const PaginaDeInicio = Castelog.metodos.un_componente_vue2("PaginaDeInicio",
  + "        <tbody>"
  + "            <tr>"
  + "                <td style=\"white-space:nowrap; color:white;\">Buscar en Google:</td>"
- + "                <td style=\"width:100%;\"><input style=\"width:100%;\" type=\"text\" v-on:keypress.enter=\"buscar_en_google_normal\" v-model=\"busqueda_para_google_normal\" /></td>"
+ + "                <td style=\"width:100%;\"><input style=\"width:100%;\" type=\"text\" v-on:keypress.enter=\"buscar_en_google_normal\" v-model=\"busqueda_para_google_normal\" ref=\"buscador_de_google_normal\" /></td>"
  + "            </tr>"
  + "            <tr>"
  + "                <td style=\"white-space:nowrap; color:white;\">Buscar en Youtube:</td>"
@@ -57743,6 +57743,11 @@ const PaginaDeInicio = Castelog.metodos.un_componente_vue2("PaginaDeInicio",
  + "            <tr>"
  + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
  + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_github\">Ir a Github</button>"
+ + "                </td>"
+ + "            </tr>"
+ + "            <tr>"
+ + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
+ + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_mi_perfil_de_github\">Ir a mi perfil de Github</button>"
  + "                </td>"
  + "            </tr>"
  + "            <tr>"
@@ -57843,6 +57848,15 @@ throw error;
 }
 
 },
+ir_a_mi_perfil_de_github() {try {
+const url_destino = "https://github.com/allnulled";
+window.open( url_destino );
+} catch(error) {
+console.log(error);
+throw error;
+}
+
+},
 ir_a_quora_espanyol() {try {
 const url_destino = "https://es.quora.com";
 window.open( url_destino );
@@ -57852,6 +57866,14 @@ throw error;
 }
 
 }
+},
+mounted() {try {
+this.$refs.buscador_de_google_normal.focus(  );
+} catch(error) {
+console.log(error);
+throw error;
+}
+
 }
 };},
   null);
