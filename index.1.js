@@ -57765,6 +57765,11 @@ const PaginaDeInicio = Castelog.metodos.un_componente_vue2("PaginaDeInicio",
  + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_mi_lista_de_youtube\">Ir a mi lista de Youtube</button>"
  + "                </td>"
  + "            </tr>"
+ + "            <tr>"
+ + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
+ + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_tiempo_meteorologico_local\">Ir a tiempo meteorológico local</button>"
+ + "                </td>"
+ + "            </tr>"
  + "        </tbody>"
  + "    </table>"
  + "  </div>",
@@ -57887,6 +57892,15 @@ throw error;
 },
 ir_a_mi_lista_de_youtube() {try {
 const url_destino = "https://www.youtube.com/watch?v=xHVzzR_2e-U&list=LLQobCD1eb2IdZmGFPt0eMGQ";
+window.open( url_destino );
+} catch(error) {
+console.log(error);
+throw error;
+}
+
+},
+ir_a_tiempo_meteorologico_local() {try {
+const url_destino = "https://www.aemet.es/es/eltiempo/prediccion/municipios/horas/bonastre-id43030";
 window.open( url_destino );
 } catch(error) {
 console.log(error);

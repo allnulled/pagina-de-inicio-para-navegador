@@ -102,6 +102,11 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
                     <button style="width:100%;" v-on:click="ir_a_mi_lista_de_youtube">Ir a mi lista de Youtube</button>
                 </td>
             </tr>
+            <tr>
+                <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
+                    <button style="width:100%;" v-on:click="ir_a_tiempo_meteorologico_local">Ir a tiempo meteorológico local</button>
+                </td>
+            </tr>
         </tbody>
     </table>
   </div>
@@ -168,6 +173,10 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
             }.
             método ir_a_mi_lista_de_youtube donde {
                 creo url_destino como "https://www.youtube.com/watch?v=xHVzzR_2e-U&list=LLQobCD1eb2IdZmGFPt0eMGQ".
+                hago window.open(url_destino).
+            }.
+            método ir_a_tiempo_meteorologico_local donde {
+                creo url_destino como "https://www.aemet.es/es/eltiempo/prediccion/municipios/horas/bonastre-id43030".
                 hago window.open(url_destino).
             }.
         }.
