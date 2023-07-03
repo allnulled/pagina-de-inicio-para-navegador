@@ -1,0 +1,1 @@
+cp index.1.html docs/index.html
