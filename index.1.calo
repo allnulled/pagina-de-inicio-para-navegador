@@ -99,12 +99,22 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
             </tr>
             <tr>
                 <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
+                    <button style="width:100%;" v-on:click="ir_a_youtube">Ir a Youtube</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
                     <button style="width:100%;" v-on:click="ir_a_mi_lista_de_youtube">Ir a mi lista de Youtube</button>
                 </td>
             </tr>
             <tr>
                 <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
                     <button style="width:100%;" v-on:click="ir_a_tiempo_meteorologico_local">Ir a tiempo meteorológico local</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="white-space:nowrap; color:white; width:100%;" colspan="100">
+                    <button style="width:100%;" v-on:click="ir_a_capitulo_aleatorio_de_los_argentos">Ir a capítulo aleatorio de «Los Argentos»</button>
                 </td>
             </tr>
         </tbody>
@@ -175,8 +185,18 @@ creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plan
                 creo url_destino como "https://www.youtube.com/watch?v=xHVzzR_2e-U&list=LLQobCD1eb2IdZmGFPt0eMGQ".
                 hago window.open(url_destino).
             }.
+            método ir_a_youtube donde {
+                creo url_destino como "https://www.youtube.com".
+                hago window.open(url_destino).
+            }.
             método ir_a_tiempo_meteorologico_local donde {
                 creo url_destino como "https://www.aemet.es/es/eltiempo/prediccion/municipios/horas/bonastre-id43030".
+                hago window.open(url_destino).
+            }.
+            método ir_a_capitulo_aleatorio_de_los_argentos donde {
+                creo capitulo como un valor aleatorio de Array.from(Array(200).keys()).
+                creo busqueda como `Los Argentos capitulo ${capitulo}`.
+                creo url_destino como "https://youtube.com/results?search_query=" + encodeURIComponent(busqueda).
                 hago window.open(url_destino).
             }.
         }.

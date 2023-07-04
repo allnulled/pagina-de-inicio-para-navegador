@@ -57762,12 +57762,22 @@ const PaginaDeInicio = Castelog.metodos.un_componente_vue2("PaginaDeInicio",
  + "            </tr>"
  + "            <tr>"
  + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
+ + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_youtube\">Ir a Youtube</button>"
+ + "                </td>"
+ + "            </tr>"
+ + "            <tr>"
+ + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
  + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_mi_lista_de_youtube\">Ir a mi lista de Youtube</button>"
  + "                </td>"
  + "            </tr>"
  + "            <tr>"
  + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
  + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_tiempo_meteorologico_local\">Ir a tiempo meteorológico local</button>"
+ + "                </td>"
+ + "            </tr>"
+ + "            <tr>"
+ + "                <td style=\"white-space:nowrap; color:white; width:100%;\" colspan=\"100\">"
+ + "                    <button style=\"width:100%;\" v-on:click=\"ir_a_capitulo_aleatorio_de_los_argentos\">Ir a capítulo aleatorio de «Los Argentos»</button>"
  + "                </td>"
  + "            </tr>"
  + "        </tbody>"
@@ -57899,8 +57909,28 @@ throw error;
 }
 
 },
+ir_a_youtube() {try {
+const url_destino = "https://www.youtube.com";
+window.open( url_destino );
+} catch(error) {
+console.log(error);
+throw error;
+}
+
+},
 ir_a_tiempo_meteorologico_local() {try {
 const url_destino = "https://www.aemet.es/es/eltiempo/prediccion/municipios/horas/bonastre-id43030";
+window.open( url_destino );
+} catch(error) {
+console.log(error);
+throw error;
+}
+
+},
+ir_a_capitulo_aleatorio_de_los_argentos() {try {
+const capitulo = Castelog.metodos.un_valor_aleatorio(Array.from( Array( 200 ).keys(  ) ));
+const busqueda = `Los Argentos capitulo ${capitulo}`;
+const url_destino = "https://youtube.com/results?search_query=" + encodeURIComponent( busqueda );
 window.open( url_destino );
 } catch(error) {
 console.log(error);
